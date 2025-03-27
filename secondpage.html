@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MyloXloto's Info</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation bar with interactive buttons -->
+  <nav>
+    <ul>
+      <li><a href="#" onclick="showSection('media')">Media</a></li>
+      <li><a href="#" onclick="showSection('sports')">Sports</a></li>
+      <li><a href="#" onclick="showSection('skills')">Skills</a></li>
+      <li><a href="#" onclick="showSection('education')">Education</a></li>
+      <li><a href="#" onclick="showSection('interests')">Interests</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sections -->
+  <section id="media">
+    <h2>Media</h2>
+    <p>Add information about your favorite media (movies, music, games, etc.).</p>
+  </section>
+
+  <section id="sports">
+    <h2>Sports</h2>
+    <p>Talk about your sports activities, teams you follow, or any athletic achievements.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <p>Highlight any special skills or talents you have.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p>Detail your educational background or any ongoing learning.</p>
+  </section>
+
+  <section id="interests">
+    <h2>Interests</h2>
+    <p>List your hobbies, passions, or anything else you enjoy.</p>
+  </section>
+
+  <footer>
+    <p>©2025, MyloXloto. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript to toggle sections -->
+  <script>
+    function showSection(sectionId) {
+      // Hide all sections
+      var sections = document.querySelectorAll("section");
+      sections.forEach(function(section) {
+        section.style.display = "none";
+      });
+      // Show the selected section
+      document.getElementById(sectionId).style.display = "block";
+    }
+
+    // Show the 'media' section by default on page load
+    document.addEventListener("DOMContentLoaded", function() {
+      showSection("media");
+    });
+  </script>
+</body>
+</html>

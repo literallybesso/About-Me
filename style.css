@@ -1,0 +1,124 @@
+/* Global resets and styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Make text readable on images/GIFs */
+  body {
+    color: #ffffff;
+  }
+  
+  /* Background for index (main) page */
+  .index-body {
+    /* Point to your Ezio2.jpg inside Pics/Main */
+    background: url('Pics/Main/Ezio2.jpg') center center no-repeat;
+    background-size: cover;
+    min-height: 100vh; /* Ensures full viewport height */
+  }
+  
+  /* Container for the Welcome page */
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+  }
+  
+  /* Enter button styling */
+  .enter-btn {
+    background: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+  
+  .enter-btn:hover {
+    background: #555;
+  }
+  
+  /* Footer styling */
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: #121212;
+    padding: 0.5rem 0;
+    color: #fff;
+  }
+  
+  /* Navigation bar */
+  nav {
+    background-color: #222;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  /* Navigation links */
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #888;
+  }
+  
+  /* Sections on the second page */
+  section {
+    padding: 4rem 1rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 8px;
+    display: none; /* Hidden by default, revealed via JS */
+    /* Add a subtle overlay so text is readable on GIF backgrounds */
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Animated backgrounds for each section */
+  /* Each section uses the relevant GIF from Pics/Sections */
+  #media {
+    background: url('Pics/Sections/Media.gif') center center no-repeat;
+    background-size: cover;
+  }
+  
+  #sports {
+    background: url('Pics/Sections/Sports.gif') center center no-repeat;
+    background-size: cover;
+  }
+  
+  #skills {
+    background: url('Pics/Sections/Skills.gif') center center no-repeat;
+    background-size: cover;
+  }
+  
+  #education {
+    background: url('Pics/Sections/Education.gif') center center no-repeat;
+    background-size: cover;
+  }
+  
+  #interests {
+    background: url('Pics/Sections/Interests.gif') center center no-repeat;
+    background-size: cover;
+  }
+  
