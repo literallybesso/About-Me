@@ -13,10 +13,9 @@
   
   /* Background for index (main) page */
   .index-body {
-    /* Point to your Ezio2.jpg inside Pics/Main */
     background: url('Pics/Main/Ezio2.jpg') center center no-repeat;
     background-size: cover;
-    min-height: 100vh; /* Ensures full viewport height */
+    min-height: 100vh;
   }
   
   /* Container for the Welcome page */
@@ -27,7 +26,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    background: rgba(0, 0, 0, 0.5);
   }
   
   /* Enter button styling */
@@ -87,38 +86,42 @@
   /* Sections on the second page */
   section {
     padding: 4rem 1rem;
-    max-width: 800px;
-    margin: 2rem auto;
-    border-radius: 8px;
-    display: none; /* Hidden by default, revealed via JS */
-    /* Add a subtle overlay so text is readable on GIF backgrounds */
+    /* max-width: 800px; */ /* Removed to allow full-width layout */
+    margin: 0;
+    border-radius: 0;
+    display: none;
+  
+    /* Make sections fill the screen */
+    min-height: 100vh;
+  
+    /* Background overlay for readability */
     background-color: rgba(0, 0, 0, 0.4);
+  
+    /* Optional: background behavior improvements */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Adds parallax-style effect */
   }
   
   /* Animated backgrounds for each section */
-  /* Each section uses the relevant GIF from Pics/Sections */
   #media {
-    background: url('Pics/Sections/Media.gif') center center no-repeat;
-    background-size: cover;
+    background-image: url('Pics/Sections/Media.gif');
   }
   
   #sports {
-    background: url('Pics/Sections/Sports.gif') center center no-repeat;
-    background-size: cover;
+    background-image: url('Pics/Sections/Sports.gif');
   }
   
   #skills {
-    background: url('Pics/Sections/Skills.gif') center center no-repeat;
-    background-size: cover;
+    background-image: url('Pics/Sections/Skills.gif');
   }
   
   #education {
-    background: url('Pics/Sections/Education.gif') center center no-repeat;
-    background-size: cover;
+    background-image: url('Pics/Sections/Education.gif');
   }
   
   #interests {
-    background: url('Pics/Sections/Interests.gif') center center no-repeat;
-    background-size: cover;
+    background-image: url('Pics/Sections/Interests.gif');
   }
   
