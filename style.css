@@ -1,4 +1,3 @@
-/* Global resets and styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,19 +5,18 @@
     font-family: Arial, sans-serif;
   }
   
-  /* Make text readable on images/GIFs */
   body {
     color: #ffffff;
   }
   
-  /* Background for index (main) page */
+  /* Background for index page */
   .index-body {
     background: url('Pics/Main/Ezio2.jpg') center center no-repeat;
     background-size: cover;
     min-height: 100vh;
   }
   
-  /* Container for the Welcome page */
+  /* Welcome page container */
   .container {
     display: flex;
     flex-direction: column;
@@ -29,7 +27,6 @@
     background: rgba(0, 0, 0, 0.5);
   }
   
-  /* Enter button styling */
   .enter-btn {
     background: #333;
     color: #fff;
@@ -45,7 +42,7 @@
     background: #555;
   }
   
-  /* Footer styling */
+  /* Footer */
   footer {
     position: fixed;
     bottom: 0;
@@ -56,14 +53,13 @@
     color: #fff;
   }
   
-  /* Navigation bar */
+  /* Navigation */
   nav {
     background-color: #222;
     padding: 1rem;
     text-align: center;
   }
   
-  /* Navigation links */
   nav ul {
     list-style: none;
     display: flex;
@@ -83,28 +79,37 @@
     color: #888;
   }
   
-  /* Sections on the second page */
+  /* Sections */
   section {
-    padding: 4rem 1rem;
-    /* max-width: 800px; */ /* Removed to allow full-width layout */
+    display: none;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0;
     margin: 0;
     border-radius: 0;
-    display: none;
   
-    /* Make sections fill the screen */
-    min-height: 100vh;
-  
-    /* Background overlay for readability */
-    background-color: rgba(0, 0, 0, 0.4);
-  
-    /* Optional: background behavior improvements */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Adds parallax-style effect */
+    background-attachment: fixed;
+  
+    position: relative;
   }
   
-  /* Animated backgrounds for each section */
+  /* Centered content with overlay */
+  section .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 90%;
+  }
+  
+  /* Backgrounds for each section */
   #media {
     background-image: url('Pics/Sections/Media.gif');
   }

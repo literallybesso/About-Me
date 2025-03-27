@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation bar with interactive buttons -->
   <nav>
     <ul>
       <li><a href="#" onclick="showSection('media')">Media</a></li>
@@ -19,48 +18,52 @@
 
   <!-- Sections -->
   <section id="media">
-    <h2>Media</h2>
-    <p>Add information about your favorite media (movies, music, games, etc.).</p>
+    <div class="content">
+      <h2>Media</h2>
+      <p>Add information about your favorite media (movies, music, games, etc.).</p>
+    </div>
   </section>
 
   <section id="sports">
-    <h2>Sports</h2>
-    <p>Talk about your sports activities, teams you follow, or any athletic achievements.</p>
+    <div class="content">
+      <h2>Sports</h2>
+      <p>Talk about your sports activities, teams you follow, or any athletic achievements.</p>
+    </div>
   </section>
 
   <section id="skills">
-    <h2>Skills</h2>
-    <p>Highlight any special skills or talents you have.</p>
+    <div class="content">
+      <h2>Skills</h2>
+      <p>Highlight any special skills or talents you have.</p>
+    </div>
   </section>
 
   <section id="education">
-    <h2>Education</h2>
-    <p>Detail your educational background or any ongoing learning.</p>
+    <div class="content">
+      <h2>Education</h2>
+      <p>Detail your educational background or any ongoing learning.</p>
+    </div>
   </section>
 
   <section id="interests">
-    <h2>Interests</h2>
-    <p>List your hobbies, passions, or anything else you enjoy.</p>
+    <div class="content">
+      <h2>Interests</h2>
+      <p>List your hobbies, passions, or anything else you enjoy.</p>
+    </div>
   </section>
 
   <footer>
     <p>©2025, MyloXloto. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript to toggle sections -->
   <script>
     function showSection(sectionId) {
-      // Hide all sections
-      var sections = document.querySelectorAll("section");
-      sections.forEach(function(section) {
-        section.style.display = "none";
-      });
-      // Show the selected section
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => section.style.display = "none");
       document.getElementById(sectionId).style.display = "block";
     }
 
-    // Show the 'media' section by default on page load
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", () => {
       showSection("media");
     });
   </script>
