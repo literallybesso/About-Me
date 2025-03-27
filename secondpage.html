@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <button class="back-btn" onclick="window.location.href='index.html'">&#8592; Back</button>
+
   <nav>
     <ul>
       <li><a href="#" onclick="showSection('media')">Media</a></li>
@@ -16,39 +18,70 @@
     </ul>
   </nav>
 
-  <!-- Sections -->
+  <!-- Media -->
   <section id="media">
     <div class="content">
       <h2>Media</h2>
-      <p>Add information about your favorite media (movies, music, games, etc.).</p>
+      <p>I enjoy all types of media — whatever it is, I'm into it.</p>
+      <h3>Favourite Shows</h3>
+      <ul><li>Breaking Bad</li><li>Invincible</li></ul>
+      <h3>Favourite Movies</h3>
+      <ul><li>Bullet Train</li><li>The Imitation Game</li></ul>
+      <h3>Favourite Music Artists</h3>
+      <ul><li>Enrique Iglesias</li><li>Arctic Monkeys</li></ul>
+      <h3>Favourite Content Creator</h3>
+      <p>PewDiePie</p>
     </div>
   </section>
 
+  <!-- Sports -->
   <section id="sports">
-    <div class="content">
-      <h2>Sports</h2>
-      <p>Talk about your sports activities, teams you follow, or any athletic achievements.</p>
+    <div class="content card-grid">
+      <div class="card">Formula 1</div>
+      <div class="card">Swimming</div>
+      <div class="card">Football</div>
+      <div class="card">Volleyball</div>
+      <div class="card">Basketball</div>
     </div>
   </section>
 
+  <!-- Skills -->
   <section id="skills">
-    <div class="content">
-      <h2>Skills</h2>
-      <p>Highlight any special skills or talents you have.</p>
+    <div class="content card-grid">
+      <div class="card">3D Designing/Modeling</div>
+      <div class="card">Video & Photo Editing</div>
+      <div class="card">Music Editing</div>
+      <div class="card">Multi-lingual Programming</div>
+      <div class="card">App Development</div>
     </div>
   </section>
 
+  <!-- Education -->
   <section id="education">
     <div class="content">
       <h2>Education</h2>
-      <p>Detail your educational background or any ongoing learning.</p>
+      <p>I’m a hardworking 4th-year Biomedical Engineering student with a strong academic record and a passion for innovation. Throughout my studies, I’ve earned three honor awards in recognition of my performance and consistency. My dedication to excellence is reflected in my high GPA, and I continuously strive to expand my knowledge in both engineering and the biomedical field.</p>
     </div>
   </section>
 
+  <!-- Interests -->
   <section id="interests">
     <div class="content">
       <h2>Interests</h2>
-      <p>List your hobbies, passions, or anything else you enjoy.</p>
+      <p>I'm someone who finds excitement and fulfillment in a wide range of passions. Whether it’s watching shows, diving into music, following sports, building skills, or pushing academic boundaries — I love immersing myself fully in what I enjoy. I have a huge love for video games, and I'm always exploring new topics, collecting skills, and chasing new interests. Learning is a lifelong adventure, and I’m all in.</p>
+      <h3>Top 10 Favorite Video Games</h3>
+      <ol>
+        <li>Assassin’s Creed series</li>
+        <li>BioShock series</li>
+        <li>Fallout series</li>
+        <li>Sekiro</li>
+        <li>Red Dead Redemption 2</li>
+        <li>Zelda: Tears of the Kingdom</li>
+        <li>God of War (2018)</li>
+        <li>Hollow Knight</li>
+        <li>Enter the Gungeon</li>
+        <li>The Long Dark</li>
+      </ol>
     </div>
   </section>
 
@@ -59,8 +92,14 @@
   <script>
     function showSection(sectionId) {
       const sections = document.querySelectorAll("section");
-      sections.forEach(section => section.style.display = "none");
-      document.getElementById(sectionId).style.display = "block";
+      sections.forEach(section => {
+        section.style.display = "none";
+        section.classList.remove("fade-in");
+      });
+
+      const current = document.getElementById(sectionId);
+      current.style.display = "block";
+      setTimeout(() => current.classList.add("fade-in"), 10);
     }
 
     document.addEventListener("DOMContentLoaded", () => {
