@@ -2,108 +2,504 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>MyloXloto's Info</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyloXloto's Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
-<body>
-  <button class="back-btn" onclick="window.location.href='index.html'">&#8592; Back</button>
+<body class="main-body">
+  <!-- Page Loader -->
+  <div class="page-loader">
+    <div class="loader-circle"></div>
+    <div class="loader-text">Loading MyloXloto's World</div>
+  </div>
 
-  <nav>
+  <!-- Header -->
+  <header>
+    <!-- Clicking the logo returns to index.html -->
+    <div class="logo" onclick="window.location.href='index.html'">
+      <span>M</span><span class="logo-x">X</span>
+    </div>
+    
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="#" class="nav-link" data-section="media">Media</a></li>
+        <li><a href="#" class="nav-link" data-section="sports">Sports</a></li>
+        <li><a href="#" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#" class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#" class="nav-link" data-section="interests">Interests</a></li>
+      </ul>
+    </nav>
+    
+    <div class="menu-toggle">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav">
     <ul>
-      <li><a href="#" onclick="showSection('media')">Media</a></li>
-      <li><a href="#" onclick="showSection('sports')">Sports</a></li>
-      <li><a href="#" onclick="showSection('skills')">Skills</a></li>
-      <li><a href="#" onclick="showSection('education')">Education</a></li>
-      <li><a href="#" onclick="showSection('interests')">Interests</a></li>
+      <li><a href="#" class="nav-link" data-section="media">Media</a></li>
+      <li><a href="#" class="nav-link" data-section="sports">Sports</a></li>
+      <li><a href="#" class="nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#" class="nav-link" data-section="education">Education</a></li>
+      <li><a href="#" class="nav-link" data-section="interests">Interests</a></li>
     </ul>
   </nav>
 
-  <!-- Media -->
-  <section id="media">
-    <div class="content">
-      <h2>Media</h2>
-      <p>I enjoy all types of media — whatever it is, I'm into it.</p>
-      <h3>Favourite Shows</h3>
-      <ul><li>Breaking Bad</li><li>Invincible</li></ul>
-      <h3>Favourite Movies</h3>
-      <ul><li>Bullet Train</li><li>The Imitation Game</li></ul>
-      <h3>Favourite Music Artists</h3>
-      <ul><li>Enrique Iglesias</li><li>Arctic Monkeys</li></ul>
-      <h3>Favourite Content Creator</h3>
-      <p>PewDiePie</p>
+  <!-- Portfolio Sections -->
+
+  <!-- Media Section -->
+  <section id="media" class="section">
+    <div class="section-container">
+      <h2 class="section-title" data-aos="fade-down">Media Favorites</h2>
+      
+      <div class="media-grid">
+        <div class="media-category" data-aos="fade-right" data-aos-delay="200">
+          <div class="category-header">
+            <i class="fas fa-tv"></i>
+            <h3>TV Shows</h3>
+          </div>
+          <div class="media-items">
+            <div class="media-item">
+              <div class="media-icon"><i class="fas fa-flask"></i></div>
+              <p>Breaking Bad</p>
+            </div>
+            <div class="media-item">
+              <div class="media-icon"><i class="fas fa-mask"></i></div>
+              <p>Invincible</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="media-category" data-aos="fade-up" data-aos-delay="300">
+          <div class="category-header">
+            <i class="fas fa-film"></i>
+            <h3>Movies</h3>
+          </div>
+          <div class="media-items">
+            <div class="media-item">
+              <div class="media-icon"><i class="fas fa-train"></i></div>
+              <p>Bullet Train</p>
+            </div>
+            <div class="media-item">
+              <div class="media-icon"><i class="fas fa-cogs"></i></div>
+              <p>The Imitation Game</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="media-category" data-aos="fade-left" data-aos-delay="400">
+          <div class="category-header">
+            <i class="fas fa-music"></i>
+            <h3>Music</h3>
+          </div>
+          <div class="media-items">
+            <div class="media-item">
+              <div class="media-icon"><i class="fas fa-guitar"></i></div>
+              <p>Enrique Iglesias</p>
+            </div>
+            <div class="media-item">
+              <div class="media-icon"><i class="fas fa-drum"></i></div>
+              <p>Arctic Monkeys</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="media-category creator" data-aos="fade-up" data-aos-delay="500">
+          <div class="category-header">
+            <i class="fab fa-youtube"></i>
+            <h3>Content Creator</h3>
+          </div>
+          <div class="media-items">
+            <div class="media-item">
+              <div class="media-icon"><i class="fas fa-gamepad"></i></div>
+              <p>PewDiePie</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Sports -->
-  <section id="sports">
-    <div class="content card-grid">
-      <div class="card">Formula 1</div>
-      <div class="card">Swimming</div>
-      <div class="card">Football</div>
-      <div class="card">Volleyball</div>
-      <div class="card">Basketball</div>
+  <!-- Sports Section -->
+  <section id="sports" class="section">
+    <div class="section-container">
+      <h2 class="section-title" data-aos="fade-down">Sports I Follow</h2>
+      
+      <div class="sports-grid">
+        <div class="sport-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="sport-icon"><i class="fas fa-flag-checkered"></i></div>
+          <h3>Formula 1</h3>
+          <div class="card-hover">
+            <p>Following the speed and strategy of F1 racing</p>
+          </div>
+        </div>
+        
+        <div class="sport-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="sport-icon"><i class="fas fa-swimming-pool"></i></div>
+          <h3>Swimming</h3>
+          <div class="card-hover">
+            <p>Passionate about competitive swimming</p>
+          </div>
+        </div>
+        
+        <div class="sport-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="sport-icon"><i class="fas fa-futbol"></i></div>
+          <h3>Football</h3>
+          <div class="card-hover">
+            <p>The beautiful game at its finest</p>
+          </div>
+        </div>
+        
+        <div class="sport-card" data-aos="zoom-in" data-aos-delay="400">
+          <div class="sport-icon"><i class="fas fa-volleyball-ball"></i></div>
+          <h3>Volleyball</h3>
+          <div class="card-hover">
+            <p>Enjoying the excitement of volleyball matches</p>
+          </div>
+        </div>
+        
+        <div class="sport-card" data-aos="zoom-in" data-aos-delay="500">
+          <div class="sport-icon"><i class="fas fa-basketball-ball"></i></div>
+          <h3>Basketball</h3>
+          <div class="card-hover">
+            <p>Following the intensity of basketball games</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills">
-    <div class="content card-grid">
-      <div class="card">3D Designing/Modeling</div>
-      <div class="card">Video & Photo Editing</div>
-      <div class="card">Music Editing</div>
-      <div class="card">Multi-lingual Programming</div>
-      <div class="card">App Development</div>
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="section-container">
+      <h2 class="section-title" data-aos="fade-down">Technical Skills</h2>
+      
+      <div class="skills-container">
+        <div class="skill-group" data-aos="fade-right" data-aos-delay="200">
+          <div class="skill">
+            <div class="skill-info">
+              <h3>3D Designing/Modeling</h3>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%;" data-value="85"></div>
+              </div>
+            </div>
+            <div class="skill-icon"><i class="fas fa-cube"></i></div>
+          </div>
+          
+          <div class="skill">
+            <div class="skill-info">
+              <h3>Video & Photo Editing</h3>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%;" data-value="90"></div>
+              </div>
+            </div>
+            <div class="skill-icon"><i class="fas fa-camera-retro"></i></div>
+          </div>
+          
+          <div class="skill">
+            <div class="skill-info">
+              <h3>Music Editing</h3>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 75%;" data-value="75"></div>
+              </div>
+            </div>
+            <div class="skill-icon"><i class="fas fa-music"></i></div>
+          </div>
+          
+          <div class="skill">
+            <div class="skill-info">
+              <h3>Multi-lingual Programming</h3>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 95%;" data-value="95"></div>
+              </div>
+            </div>
+            <div class="skill-icon"><i class="fas fa-code"></i></div>
+          </div>
+          
+          <div class="skill">
+            <div class="skill-info">
+              <h3>App Development</h3>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%;" data-value="80"></div>
+              </div>
+            </div>
+            <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Education -->
-  <section id="education">
-    <div class="content">
-      <h2>Education</h2>
-      <p>I’m a hardworking 4th-year Biomedical Engineering student with a strong academic record and a passion for innovation. Throughout my studies, I’ve earned three honor awards in recognition of my performance and consistency. My dedication to excellence is reflected in my high GPA, and I continuously strive to expand my knowledge in both engineering and the biomedical field.</p>
+  <!-- Education Section -->
+  <section id="education" class="section">
+    <div class="section-container">
+      <h2 class="section-title" data-aos="fade-down">Academic Journey</h2>
+      
+      <div class="education-content" data-aos="fade-up">
+        <div class="education-timeline">
+          <div class="timeline-dot current"></div>
+          <div class="timeline-connector"></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-connector"></div>
+          <div class="timeline-dot"></div>
+        </div>
+        
+        <div class="education-details">
+          <div class="education-card current">
+            <div class="edu-year">2025 - Present</div>
+            <h3>Biomedical Engineering</h3>
+            <p>4th Year Student</p>
+            <div class="edu-achievements">
+              <div class="achievement">
+                <i class="fas fa-award"></i>
+                <span>3 Honor Awards</span>
+              </div>
+              <div class="achievement">
+                <i class="fas fa-graduation-cap"></i>
+                <span>High GPA</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="education-info">
+            <p>
+              I'm a dedicated Biomedical Engineering student with a passion for innovation in healthcare technology.
+              Throughout my academic journey, I've maintained academic excellence while developing practical skills in medical device design, biomaterials, and clinical applications.
+            </p>
+            <p>
+              My coursework combines engineering principles with medical sciences, preparing me to create solutions that improve patient care and outcomes.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Interests -->
-  <section id="interests">
-    <div class="content">
-      <h2>Interests</h2>
-      <p>I'm someone who finds excitement and fulfillment in a wide range of passions. Whether it’s watching shows, diving into music, following sports, building skills, or pushing academic boundaries — I love immersing myself fully in what I enjoy. I have a huge love for video games, and I'm always exploring new topics, collecting skills, and chasing new interests. Learning is a lifelong adventure, and I’m all in.</p>
-      <h3>Top 10 Favorite Video Games</h3>
-      <ol>
-        <li>Assassin’s Creed series</li>
-        <li>BioShock series</li>
-        <li>Fallout series</li>
-        <li>Sekiro</li>
-        <li>Red Dead Redemption 2</li>
-        <li>Zelda: Tears of the Kingdom</li>
-        <li>God of War (2018)</li>
-        <li>Hollow Knight</li>
-        <li>Enter the Gungeon</li>
-        <li>The Long Dark</li>
-      </ol>
+  <!-- Interests Section -->
+  <section id="interests" class="section">
+    <div class="section-container">
+      <h2 class="section-title" data-aos="fade-down">Personal Interests</h2>
+      
+      <div class="interests-content">
+        <div class="interests-text" data-aos="fade-right">
+          <p>
+            I'm someone who finds excitement and fulfillment in a wide range of passions.
+            Whether it's watching shows, diving into music, following sports, building skills, or pushing academic boundaries — I love immersing myself fully in what I enjoy.
+          </p>
+          <p>
+            I have a huge love for video games, and I'm always exploring new topics, collecting skills, and chasing new interests.
+            Learning is a lifelong adventure, and I'm all in.
+          </p>
+        </div>
+        
+        <div class="game-showcase" data-aos="fade-left">
+          <h3>Top 10 Favorite Video Games</h3>
+          <div class="games-carousel">
+            <div class="carousel-container">
+              <div class="carousel-track">
+                <div class="game-card">
+                  <div class="game-number">01</div>
+                  <h4>Assassin's Creed series</h4>
+                  <div class="game-icon"><i class="fas fa-hood-cloak"></i></div>
+                </div>
+                <div class="game-card">
+                  <div class="game-number">02</div>
+                  <h4>BioShock series</h4>
+                  <div class="game-icon"><i class="fas fa-syringe"></i></div>
+                </div>
+                <div class="game-card">
+                  <div class="game-number">03</div>
+                  <h4>Fallout series</h4>
+                  <div class="game-icon"><i class="fas fa-radiation"></i></div>
+                </div>
+                <div class="game-card">
+                  <div class="game-number">04</div>
+                  <h4>Sekiro</h4>
+                  <div class="game-icon"><i class="fas fa-sword"></i></div>
+                </div>
+                <div class="game-card">
+                  <div class="game-number">05</div>
+                  <h4>Red Dead Redemption 2</h4>
+                  <div class="game-icon"><i class="fas fa-hat-cowboy"></i></div>
+                </div>
+                <div class="game-card">
+                  <div class="game-number">06</div>
+                  <h4>Zelda: Tears of the Kingdom</h4>
+                  <div class="game-icon"><i class="fas fa-crown"></i></div>
+                </div>
+                <div class="game-card">
+                  <div class="game-number">07</div>
+                  <h4>God of War (2018)</h4>
+                  <div class="game-icon"><i class="fas fa-axe"></i></div>
+                </div>
+                <div class="game-card">
+                  <div class="game-number">08</div>
+                  <h4>Hollow Knight</h4>
+                  <div class="game-icon"><i class="fas fa-bug"></i></div>
+                </div>
+                <div class="game-card">
+                  <div class="game-number">09</div>
+                  <h4>Enter the Gungeon</h4>
+                  <div class="game-icon"><i class="fas fa-gun"></i></div>
+                </div>
+                <div class="game-card">
+                  <div class="game-number">10</div>
+                  <h4>The Long Dark</h4>
+                  <div class="game-icon"><i class="fas fa-snowflake"></i></div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>©2025, MyloXloto. All rights reserved.</p>
+    <div class="footer-content">
+      <div class="footer-logo">MX</div>
+      <div class="footer-nav">
+        <a href="#" class="nav-link" data-section="media">Media</a> |
+        <a href="#" class="nav-link" data-section="sports">Sports</a> |
+        <a href="#" class="nav-link" data-section="skills">Skills</a> |
+        <a href="#" class="nav-link" data-section="education">Education</a> |
+        <a href="#" class="nav-link" data-section="interests">Interests</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p class="copyright">©2025, MyloXloto. All rights reserved.</p>
+    </div>
   </footer>
+  
+  <!-- Scroll Progress Bar -->
+  <div class="progress-bar">
+    <div class="progress-fill"></div>
+  </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
-    function showSection(sectionId) {
-      const sections = document.querySelectorAll("section");
-      sections.forEach(section => {
-        section.style.display = "none";
-        section.classList.remove("fade-in");
+    // Page Loader & AOS initialization
+    window.addEventListener('load', function() {
+      document.querySelector('.page-loader').classList.add('loaded');
+      setTimeout(() => {
+        document.querySelector('.page-loader').style.display = 'none';
+      }, 1000);
+      
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
       });
-
-      const current = document.getElementById(sectionId);
-      current.style.display = "block";
-      setTimeout(() => current.classList.add("fade-in"), 10);
+      
+      // Show first section by default
+      showSection('media');
+    });
+    
+    // Mobile menu toggle
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      this.classList.toggle('active');
+      document.querySelector('.mobile-nav').classList.toggle('active');
+    });
+    
+    // Section navigation
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const section = this.getAttribute('data-section');
+        showSection(section);
+        // Close mobile menu if open
+        document.querySelector('.menu-toggle').classList.remove('active');
+        document.querySelector('.mobile-nav').classList.remove('active');
+      });
+    });
+    
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(sectionId).classList.add('active');
+      
+      navLinks.forEach(link => {
+        if (link.getAttribute('data-section') === sectionId) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+      
+      // Refresh AOS for the newly visible content
+      setTimeout(() => {
+        AOS.refresh();
+      }, 200);
     }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      showSection("media");
+    
+    // Skills progress bar animation
+    const skillBars = document.querySelectorAll('.skill-progress');
+    skillBars.forEach(bar => {
+      const value = bar.getAttribute('data-value');
+      bar.style.width = '0%';
+      setTimeout(() => {
+        bar.style.width = value + '%';
+      }, 100);
+    });
+    
+    // Games carousel
+    const track = document.querySelector('.carousel-track');
+    const cards = document.querySelectorAll('.game-card');
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    
+    let currentIndex = 0;
+    const cardWidth = 280; // card width + gap
+    const visibleCards = 3;
+    const maxIndex = cards.length - visibleCards;
+    
+    function updateCarousel() {
+      const position = -currentIndex * cardWidth;
+      track.style.transform = `translateX(${position}px)`;
+      prevBtn.disabled = currentIndex === 0;
+      nextBtn.disabled = currentIndex >= maxIndex;
+    }
+    
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < maxIndex) {
+        currentIndex++;
+        updateCarousel();
+      }
+    });
+    
+    updateCarousel();
+    
+    // Scroll progress bar
+    window.addEventListener('scroll', function() {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.querySelector('.progress-fill').style.width = scrolled + '%';
     });
   </script>
 </body>
